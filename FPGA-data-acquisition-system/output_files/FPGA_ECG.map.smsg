@@ -1,0 +1,4 @@
+Warning (10268): Verilog HDL information at mid_filter.v(38): always construct contains both blocking and non-blocking assignments
+Warning (10268): Verilog HDL information at h_m_s.v(69): always construct contains both blocking and non-blocking assignments
+Warning (10268): Verilog HDL information at display_ctrl.v(92): always construct contains both blocking and non-blocking assignments
+Info (10281): Verilog HDL Declaration information at FPGA_ECG.v(53): object "Rst_n" differs only in case from object "rst_n" in the same scope

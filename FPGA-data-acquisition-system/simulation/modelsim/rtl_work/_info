@@ -1,0 +1,267 @@
+m255
+K3
+13
+cModel Technology
+Z0 dD:\Desktop\FPGA_ECG\simulation\modelsim
+vadc128s022
+!i10b 1
+!s100 ocCJSkEW<6d`4hhKde27f2
+Ic7^7eUJ?U7i;b509XA2__2
+V;lT`:AiUmQnfhRjd@>X`z1
+Z1 dD:\Desktop\FPGA_ECG\simulation\modelsim
+w1561104320
+8D:/Desktop/FPGA_ECG/adc128s022.v
+FD:/Desktop/FPGA_ECG/adc128s022.v
+L0 13
+Z2 OV;L;10.1d;51
+r1
+!s85 0
+31
+!s108 1683769362.612000
+!s107 D:/Desktop/FPGA_ECG/adc128s022.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Desktop/FPGA_ECG|D:/Desktop/FPGA_ECG/adc128s022.v|
+!s101 -O0
+Z3 o-vlog01compat -work work -O0
+Z4 !s92 -vlog01compat -work work +incdir+D:/Desktop/FPGA_ECG -O0
+vbelldrive
+IgjVYZ<93Z54gO=Sz@AoN=0
+VcZA1hgczNLXSMGGme9ma70
+R1
+w1561104387
+8D:/Desktop/FPGA_ECG/belldrive.v
+FD:/Desktop/FPGA_ECG/belldrive.v
+L0 11
+R2
+r1
+31
+R3
+R4
+!i10b 1
+!s100 @X:I=z[?f7MV?76_1W5=j3
+!s85 0
+!s108 1683769362.541000
+!s107 D:/Desktop/FPGA_ECG/belldrive.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Desktop/FPGA_ECG|D:/Desktop/FPGA_ECG/belldrive.v|
+!s101 -O0
+vctrl_ADC_SD
+Id0eO]BeYQ=aB<RKdcIkGj2
+VJZ3WCF[W9@Tjn2;lWHdWD2
+R1
+w1683768264
+8D:/Desktop/FPGA_ECG/ctrl_ADC_SD.v
+FD:/Desktop/FPGA_ECG/ctrl_ADC_SD.v
+L0 8
+R2
+r1
+31
+R3
+R4
+nctrl_@a@d@c_@s@d
+!i10b 1
+!s100 c>?GPS>Lg]Um65UF@B9RG1
+!s85 0
+!s108 1683769362.469000
+!s107 D:/Desktop/FPGA_ECG/ctrl_ADC_SD.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Desktop/FPGA_ECG|D:/Desktop/FPGA_ECG/ctrl_ADC_SD.v|
+!s101 -O0
+vdisplay_ctrl
+InYhA2z7Y?f^F<[hXmfnS]1
+V5Fd>i6FZZNjl@bX^8kNfl0
+R1
+w1561104498
+8D:/Desktop/FPGA_ECG/display_ctrl.v
+FD:/Desktop/FPGA_ECG/display_ctrl.v
+L0 11
+R2
+r1
+31
+R3
+R4
+!i10b 1
+!s100 7mDWKSRj;K4o6BnDz7THc2
+!s85 0
+!s108 1683769362.392000
+!s107 D:/Desktop/FPGA_ECG/display_ctrl.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Desktop/FPGA_ECG|D:/Desktop/FPGA_ECG/display_ctrl.v|
+!s101 -O0
+vfenpin
+IzY1A3XJ[FfMd9OUfbel=i0
+VXZ`:dNcOR4D^OLFJon;Si0
+R1
+w1554973530
+8D:/Desktop/FPGA_ECG/fenpin.v
+FD:/Desktop/FPGA_ECG/fenpin.v
+L0 1
+R2
+r1
+31
+R3
+R4
+!i10b 1
+!s100 n1A]k]2l0OObN[_:O_CQd1
+!s85 0
+!s108 1683769362.314000
+!s107 D:/Desktop/FPGA_ECG/fenpin.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Desktop/FPGA_ECG|D:/Desktop/FPGA_ECG/fenpin.v|
+!s101 -O0
+vh_m_s
+IWdAiS_0Yh^j[S9@BT3Ea22
+V>302c>^3o_5eGA@X2Dkko2
+R1
+w1683767456
+8D:/Desktop/FPGA_ECG/h_m_s.v
+FD:/Desktop/FPGA_ECG/h_m_s.v
+L0 11
+R2
+r1
+31
+R3
+R4
+!i10b 1
+!s100 dLn9f3KY]TX>VEgakYOI23
+!s85 0
+!s108 1683769362.234000
+!s107 D:/Desktop/FPGA_ECG/h_m_s.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Desktop/FPGA_ECG|D:/Desktop/FPGA_ECG/h_m_s.v|
+!s101 -O0
+vsd_initial
+ITDhE2B8Ti5kV:KaPA0A;O0
+VE`Ri8YCC50>P9_^EBE0RF0
+R1
+w1557393224
+8D:/Desktop/FPGA_ECG/sd_initial.v
+FD:/Desktop/FPGA_ECG/sd_initial.v
+L0 4
+R2
+r1
+31
+R3
+R4
+!i10b 1
+!s100 6Pb6FS6TO04TL3meX4niW0
+!s85 0
+!s108 1683769362.158000
+!s107 D:/Desktop/FPGA_ECG/sd_initial.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Desktop/FPGA_ECG|D:/Desktop/FPGA_ECG/sd_initial.v|
+!s101 -O0
+vsd_read
+I8jV<5TiYG>cj:APCV>5J]0
+V^DV7]_3Q`CD3<TbPXiDZ82
+R1
+w1557312064
+8D:/Desktop/FPGA_ECG/sd_read.v
+FD:/Desktop/FPGA_ECG/sd_read.v
+L0 5
+R2
+r1
+31
+R3
+R4
+!i10b 1
+!s100 Vl2nFL9dFjbWzEYQ_e;iA3
+!s85 0
+!s108 1683769362.088000
+!s107 D:/Desktop/FPGA_ECG/sd_read.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Desktop/FPGA_ECG|D:/Desktop/FPGA_ECG/sd_read.v|
+!s101 -O0
+vsd_test
+IDe:OC:LGC45`z80f9@nOf0
+VVmFiYBzo9kDc5=1oCjc_O1
+R1
+w1557999366
+8D:/Desktop/FPGA_ECG/sd_test.v
+FD:/Desktop/FPGA_ECG/sd_test.v
+L0 5
+R2
+r1
+31
+R3
+R4
+!i10b 1
+!s100 n;NiMC7@gz3=S`;aIR4@d0
+!s85 0
+!s108 1683769362.016000
+!s107 D:/Desktop/FPGA_ECG/sd_test.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Desktop/FPGA_ECG|D:/Desktop/FPGA_ECG/sd_test.v|
+!s101 -O0
+vsd_write
+IkS>e8JA]WVM8obPEA^Mng2
+V4^Xai0_95=]>D:Qz<G[0G1
+R1
+w1557904661
+8D:/Desktop/FPGA_ECG/sd_write.v
+FD:/Desktop/FPGA_ECG/sd_write.v
+L0 4
+R2
+r1
+31
+R3
+R4
+!i10b 1
+!s100 HNO5Uzze7Mn681@i1<^4V1
+!s85 0
+!s108 1683769361.946000
+!s107 D:/Desktop/FPGA_ECG/sd_write.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Desktop/FPGA_ECG|D:/Desktop/FPGA_ECG/sd_write.v|
+!s101 -O0
+vTFT_test_pl
+IDiIU_M:=PJ?[VQiTnlMJG2
+VnT6inF4;TOo1I0J5PDU<90
+R1
+w1556096876
+8D:/Desktop/FPGA_ECG/TFT_test_pll.v
+FD:/Desktop/FPGA_ECG/TFT_test_pll.v
+L0 39
+R2
+r1
+31
+R3
+R4
+n@t@f@t_test_pl
+!i10b 1
+!s100 3ZNh?Z`4i1ZXBmF`bX?al3
+!s85 0
+!s108 1683769361.871000
+!s107 D:/Desktop/FPGA_ECG/TFT_test_pll.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Desktop/FPGA_ECG|D:/Desktop/FPGA_ECG/TFT_test_pll.v|
+!s101 -O0
+vwave
+IFN23@9^2Te:IDP@>18b4F2
+VP1;n6zb@F3_ZJ5b0DIC>J3
+R1
+w1561111599
+8D:/Desktop/FPGA_ECG/wave.v
+FD:/Desktop/FPGA_ECG/wave.v
+L0 12
+R2
+r1
+31
+R3
+R4
+!i10b 1
+!s100 Gc>ODj90S7o12UYG:cCih1
+!s85 0
+!s108 1683769361.799000
+!s107 D:/Desktop/FPGA_ECG/wave.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Desktop/FPGA_ECG|D:/Desktop/FPGA_ECG/wave.v|
+!s101 -O0
+vziti
+IcblOWXez4=HMhkjcTne5Z3
+Vz1P6Jc_cnWI@2MoAZ5>Ja0
+R1
+w1561104985
+8D:/Desktop/FPGA_ECG/ziti.v
+FD:/Desktop/FPGA_ECG/ziti.v
+L0 11
+R2
+r1
+31
+R3
+R4
+!i10b 1
+!s100 0G1WF>hKC830N_YgRKM4e3
+!s85 0
+!s108 1683769361.721000
+!s107 D:/Desktop/FPGA_ECG/ziti.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Desktop/FPGA_ECG|D:/Desktop/FPGA_ECG/ziti.v|
+!s101 -O0

@@ -1,0 +1,104 @@
+# Reading E:/altera/13.0/modelsim_ase/tcl/vsim/pref.tcl 
+# ERROR: No extended dataflow license exists
+# do FPGA_ECG_run_msim_rtl_verilog.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Copying E:\altera\13.0\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied E:\altera\13.0\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vlog -vlog01compat -work work +incdir+D:/Desktop/FPGA_ECG {D:/Desktop/FPGA_ECG/ziti.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module ziti
+# 
+# Top level modules:
+# 	ziti
+# vlog -vlog01compat -work work +incdir+D:/Desktop/FPGA_ECG {D:/Desktop/FPGA_ECG/wave.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module wave
+# 
+# Top level modules:
+# 	wave
+# vlog -vlog01compat -work work +incdir+D:/Desktop/FPGA_ECG {D:/Desktop/FPGA_ECG/TFT_test_pll.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module TFT_test_pl
+# 
+# Top level modules:
+# 	TFT_test_pl
+# vlog -vlog01compat -work work +incdir+D:/Desktop/FPGA_ECG {D:/Desktop/FPGA_ECG/sd_write.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module sd_write
+# 
+# Top level modules:
+# 	sd_write
+# vlog -vlog01compat -work work +incdir+D:/Desktop/FPGA_ECG {D:/Desktop/FPGA_ECG/sd_test.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module sd_test
+# 
+# Top level modules:
+# 	sd_test
+# vlog -vlog01compat -work work +incdir+D:/Desktop/FPGA_ECG {D:/Desktop/FPGA_ECG/sd_read.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module sd_read
+# 
+# Top level modules:
+# 	sd_read
+# vlog -vlog01compat -work work +incdir+D:/Desktop/FPGA_ECG {D:/Desktop/FPGA_ECG/sd_initial.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module sd_initial
+# 
+# Top level modules:
+# 	sd_initial
+# vlog -vlog01compat -work work +incdir+D:/Desktop/FPGA_ECG {D:/Desktop/FPGA_ECG/h_m_s.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module h_m_s
+# 
+# Top level modules:
+# 	h_m_s
+# vlog -vlog01compat -work work +incdir+D:/Desktop/FPGA_ECG {D:/Desktop/FPGA_ECG/fenpin.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module fenpin
+# 
+# Top level modules:
+# 	fenpin
+# vlog -vlog01compat -work work +incdir+D:/Desktop/FPGA_ECG {D:/Desktop/FPGA_ECG/display_ctrl.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module display_ctrl
+# 
+# Top level modules:
+# 	display_ctrl
+# vlog -vlog01compat -work work +incdir+D:/Desktop/FPGA_ECG {D:/Desktop/FPGA_ECG/ctrl_ADC_SD.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module ctrl_ADC_SD
+# 
+# Top level modules:
+# 	ctrl_ADC_SD
+# vlog -vlog01compat -work work +incdir+D:/Desktop/FPGA_ECG {D:/Desktop/FPGA_ECG/belldrive.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module belldrive
+# 
+# Top level modules:
+# 	belldrive
+# vlog -vlog01compat -work work +incdir+D:/Desktop/FPGA_ECG {D:/Desktop/FPGA_ECG/adc128s022.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module adc128s022
+# 
+# Top level modules:
+# 	adc128s022
+# vlog -vlog01compat -work work +incdir+D:/Desktop/FPGA_ECG {D:/Desktop/FPGA_ECG/FPGA_ECG.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module FPGA_ECG
+# ** Error: D:/Desktop/FPGA_ECG/FPGA_ECG.v(273): 'init_done' already declared in this scope (FPGA_ECG).
+# ** Error: D:/Desktop/FPGA_ECG/FPGA_ECG.v(274): 'sd_data' already declared in this scope (FPGA_ECG).
+# ** Error: D:/Desktop/FPGA_ECG/FPGA_ECG.v(275): 'wave_data' already declared in this scope (FPGA_ECG).
+# ** Error: D:/Desktop/FPGA_ECG/FPGA_ECG.v(276): 'req_r' already declared in this scope (FPGA_ECG).
+# ** Error: D:/Desktop/FPGA_ECG/FPGA_ECG.v(277): 'req_w' already declared in this scope (FPGA_ECG).
+# ** Error: E:/altera/13.0/modelsim_ase/win32aloem/vlog failed.
+# Error in macro ./FPGA_ECG_run_msim_rtl_verilog.do line 21
+# E:/altera/13.0/modelsim_ase/win32aloem/vlog failed.
+#     while executing
+# "vlog -vlog01compat -work work +incdir+D:/Desktop/FPGA_ECG {D:/Desktop/FPGA_ECG/FPGA_ECG.v}"

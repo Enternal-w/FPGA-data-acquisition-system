@@ -1,0 +1,13 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="FPGA_ECG">
+		<CBX_INST_ENTRY INSTANCE_NAME="|FPGA_ECG|TFT_test_pl:TFT_test_pll|altpll:altpll_component" CBX_FILE_NAME="TFT_test_pll_altpll.v"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|FPGA_ECG|h_m_s:h_m_s|lpm_divide:Div0" CBX_FILE_NAME="lpm_divide_ghm.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|FPGA_ECG|h_m_s:h_m_s|lpm_divide:Div2" CBX_FILE_NAME="lpm_divide_hhm.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|FPGA_ECG|h_m_s:h_m_s|lpm_divide:Mod1" CBX_FILE_NAME="lpm_divide_k9m.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|FPGA_ECG|h_m_s:h_m_s|lpm_divide:Div1" CBX_FILE_NAME="lpm_divide_hhm.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|FPGA_ECG|h_m_s:h_m_s|lpm_divide:Mod0" CBX_FILE_NAME="lpm_divide_j9m.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|FPGA_ECG|h_m_s:h_m_s|lpm_divide:Mod2" CBX_FILE_NAME="lpm_divide_k9m.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|FPGA_ECG|pll_clk:pll_clk_inst|altpll:altpll_component" CBX_FILE_NAME="pll_clk_altpll.v"/>
+	</PROJECT>
+</LOG_ROOT>

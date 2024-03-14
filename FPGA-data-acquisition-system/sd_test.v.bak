@@ -1,0 +1,193 @@
+`timescale 1ns / 1ps
+//********************* sd_test  顶层程序*************************
+
+		
+module sd_test(
+		input  [7:0]adc_data,
+		input  req_r,
+		input  req_w,
+		output reg[7:0]sddata_o,
+		output reg init_done,
+		
+		input  clk,          //50Mhz input clock 
+		input  rst_n,
+		input  SD_dataout,   //SD SPI 数据输出
+		output reg SD_clk,       //25Mhz SD SPI 时钟
+		output SD_cs,        //SD SPI 片选
+		output SD_datain     //SD SPI 数据输入
+ );
+		wire SD_datain_i;
+		wire SD_datain_w;
+		wire SD_datain_r;
+		reg SD_datain_o;
+		wire SD_cs_i;
+		wire SD_cs_w;
+		wire SD_cs_r;
+		reg SD_cs_o;
+		wire clk4K;
+		wire clk25M;
+		
+		reg [31:0]read_sec;
+		reg read_req;
+		reg [31:0]write_sec;
+		reg write_req;
+		wire [7:0]mydata_o;      // synthesis keep */
+		wire myvalid_o;          // synthesis keep */
+		wire init_o;             //SD 初始化完成标识  /* synthesis keep */
+		wire write_o;            //SD blcok 写完成标识
+		wire read_o;             //SD blcok 读完成标识
+		reg [3:0] sd_state;
+		wire [3:0] initial_state;
+		wire [3:0] write_state;
+		wire [3:0] read_state;
+		wire rx_valid;
+		
+		parameter STATUS_INITIAL=4'd0; //SD 卡初始化状态
+		parameter STATUS_WRITE=4'd1;   //SD 卡写数据状态
+		parameter STATUS_READ=4'd2;    //SD 卡读数据状态
+		parameter STATUS_IDLE=4'd3;    //SD 卡 idle 状态
+		
+		assign SD_cs=SD_cs_o;
+		assign SD_datain=SD_datain_o;
+	   always@(posedge clk)init_done <= init_o;
+		
+		always@(posedge SD_clk)begin
+			if(myvalid_o)
+				sddata_o <= mydata_o;
+		end
+		
+//***************SD 卡初始化,block 写,block 读
+always @ ( posedge SD_clk or negedge rst_n )
+	if( !rst_n ) begin
+			sd_state <= STATUS_INITIAL;
+			read_req <= 1'b0;
+			read_sec <= 32'h0;
+			write_req <= 1'b0;
+			write_sec <= 32'h0;
+   end 
+	else 
+		case( sd_state )
+		
+			STATUS_INITIAL: // 等待 sd 卡初始化结束
+				if( init_o ) begin 
+					sd_state <= STATUS_IDLE; 
+				end
+				else begin
+					sd_state <= STATUS_INITIAL; 
+				end
+				
+			STATUS_IDLE: //空闲状态
+			begin
+				if(req_w)
+					begin sd_state <= STATUS_WRITE;write_sec <= 32'h0;write_req<=1'b1; end
+				else if(req_r)
+					begin sd_state <= STATUS_READ;read_sec <= 32'h0;read_req<=1'b1; end
+				else
+				sd_state <= STATUS_IDLE;
+			end
+			
+			STATUS_WRITE: //等待 sd 卡 block 写结束,从 SD 卡的扇区 0 开始写入 512 个数据
+				if( write_o ) begin 
+					sd_state <= STATUS_IDLE; 
+					write_req<=1'b0;
+				end
+				else begin 
+					sd_state <= STATUS_WRITE;
+				end
+				
+			STATUS_READ: //等待 sd 卡 block 读结束，从 SD 卡的扇区 0 开始读出 512 个数据
+				if( read_o ) begin 
+					sd_state <= STATUS_IDLE;
+					read_req<=1'b0;
+				end
+				else begin 
+					sd_state <= STATUS_READ; 
+				end
+				
+			default: 
+				sd_state <= STATUS_IDLE;
+		endcase
+  
+//******************SD 卡 SPI 信号的选择*********
+	always @(*)
+	begin
+		case( sd_state )
+			STATUS_INITIAL: begin 
+				SD_cs_o<=SD_cs_i;
+				SD_datain_o<=SD_datain_i; 
+			end
+			STATUS_WRITE: begin 
+				SD_cs_o<=SD_cs_w;
+				SD_datain_o<=SD_datain_w;
+			end
+			STATUS_READ: begin 
+				SD_cs_o<=SD_cs_r;
+				SD_datain_o<=SD_datain_r; 
+			end
+			default: begin 
+				SD_cs_o<=1'b1;
+				SD_datain_o<=1'b1; 
+			end
+		endcase
+	end
+//************SD 卡初始化程序*****************
+sd_initial sd_initial_inst(
+		.rst_n(rst_n),
+		.SD_clk(SD_clk),
+		.SD_cs(SD_cs_i),
+		.SD_datain(SD_datain_i),
+		.SD_dataout(SD_dataout),
+		.rx(),
+		.init_o(init_o), //init_o 为高，SD 卡初始化完成
+		.state(initial_state)
+);
+
+//***************SD 卡 block 写程序, 写 512 个 0~255,0~255 的数据
+sd_write sd_write_inst( 
+		 .SD_clk(SD_clk),
+		 .SD_cs(SD_cs_w),
+		 .SD_datain(SD_datain_w),
+		 .SD_dataout(SD_dataout),
+		 .init(init_o),
+		 .sec(write_sec), //SD 卡写扇区地址
+		 .adc_data(adc_data),
+		 .write_req(write_req), //SD 卡写请求信号
+		 .mystate(write_state),
+		 .rx_valid(rx_valid),
+		 .write_o(write_o) //write_o 为高，SD 卡数据写完成
+ );
+ 
+//******SD 卡 block 读程序, 读 512 个数据
+sd_read sd_read_inst( 
+		 .SD_clk(SD_clk),
+		 .SD_cs(SD_cs_r),
+		 .SD_datain(SD_datain_r),
+		 .SD_dataout(SD_dataout),
+		 .init(init_o),
+		 .sec(read_sec),        //SD 卡读扇区地址
+		 .read_req(read_req),   //SD 卡读请求信号
+		 .mydata_o(mydata_o),   //SD 卡中读取的数据
+		 .myvalid_o(myvalid_o), //myvalid_o 为高，标示数据有效
+		 .data_come(data_come),
+		 .mystate(read_state),
+		 .read_o(read_o)        //read_o 为高，SD 卡数据读完成
+ );
+
+reg [0:7]clkcnt;
+always@(posedge clk)
+begin
+	if(init_o == 1)
+	SD_clk <= ~SD_clk;
+	else
+		begin
+			if(clkcnt == 100)
+				begin
+				clkcnt <= 0;
+				SD_clk <= ~SD_clk;
+				end
+			else 
+				clkcnt <= clkcnt + 1;
+		end
+		
+end
+endmodule
